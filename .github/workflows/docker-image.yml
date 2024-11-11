@@ -30,10 +30,12 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t rfunes/graphql-actions:0.0.2 .
+        docker build -t rfunes/graphql-actions:latest .
         
     - name: Push Docker image
       run: |
-        docker push rfunes/graphql-actions:0.0.2        
+        docker push rfunes/graphql-actions:0.0.2 
+        docker push rfunes/graphql-actions:latest 
 
     
    # - name: Build the Docker image
