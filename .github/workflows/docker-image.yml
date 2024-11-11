@@ -26,8 +26,14 @@ jobs:
         echo "Iniciando login"
         docker login -u  $DOCKER_USER -p $DOCKER_PASSWORD
         echo "usuario logueado exitosamente"
+
+    - name: Build Docker image
+      run: |
+        docker build -t rfunes/graphql-actions:0.0.2 .
         
-        
+    - name: Push Docker image
+      run: |
+        docker push -t rfunes/graphql-actions:0.0.2 .        
 
     
    # - name: Build the Docker image
