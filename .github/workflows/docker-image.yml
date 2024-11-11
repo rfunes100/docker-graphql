@@ -33,7 +33,7 @@ jobs:
         
     - name: Push Docker image
       run: |
-        docker push  rfunes/graphql-actions:0.0.2 .        
+        docker push  rfunes/graphql-actions:0.0.2        
 
     
    # - name: Build the Docker image
